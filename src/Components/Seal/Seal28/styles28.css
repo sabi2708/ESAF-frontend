@@ -12,17 +12,31 @@
   border: none; /* Remove the outer border */
 }
 
+
+
 .seal28name {
-  font-weight: bold;
-  font-size: 12pt;
-  min-width: 100px;
-  display: inline-block;
-  white-space: nowrap;
   border: none;
-  outline: none; /* Removes inner focus rectangle */
+  outline: none;
   background: transparent;
+  display: inline-block;
   color: black;
+  font-weight: 700;
+  font-size: 12pt;
   text-align: center;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+/* Placeholder text */
+.seal28name:empty:before {
+  content: "Enter name";
+  color: gray;
+  pointer-events: none;
+}
+ 
+/* Remove focus outline */
+.seal28name:focus {
+  outline: none;
 }
 
 .seal28emp-id {
